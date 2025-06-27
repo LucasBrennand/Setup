@@ -14,11 +14,13 @@ npm run dev
 ## 🎨 Configuração do SCSS
 
 1. Crie um arquivo chamado `style.scss`.
-2. Instale a extensão **Live Sass Compiler** no VSCode.
-3. Clique em **"Watch Sass"** para compilar SCSS automaticamente.
-4. Importe o CSS compilado nos seus arquivos:
-   ```js
-   import './style.css'
+2. Rode esse comando no terminal
+```bash
+npm install -D sass-embedded
+```
+3. Importe o SCSS nos seus arquivos:
+   ```jsx
+   import './style.scss'
    ```
 
 ---
