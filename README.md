@@ -1,10 +1,10 @@
-# 🧪 Projeto Vite + Vue + SCSS + TailwindCSS
+# 🧪 Projeto Vite + React + SCSS + TailwindCSS
 
-## 🚀 Iniciando o projeto com Vite e Vue
+## 🚀 Iniciando o projeto com Vite e React
 
 ```bash
-npm create vite@latest my-vue-app -- --template vue
-cd my-vue-app
+npm create vite@latest my-react-app -- --template react
+cd my-react-app
 npm install
 npm run dev
 ```
@@ -27,8 +27,7 @@ npm run dev
 
 ### Instalação
 ```bash
-npm install -D tailwindcss postcss autoprefixer
-npx tailwindcss init -p
+npm install tailwindcss @tailwindcss/vite
 ```
 
 ### Configuração do Vite
@@ -36,16 +35,11 @@ npx tailwindcss init -p
 No arquivo `vite.config.ts` ou `vite.config.js`:
 ```ts
 import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
-import tailwindcss from 'tailwindcss'
+import react from '@vitejs/plugin-react'
+import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
-  plugins: [vue()],
-  css: {
-    postcss: {
-      plugins: [tailwindcss()]
-    }
-  }
+  plugins: [react(), tailwindcss()],
 })
 ```
 
@@ -53,11 +47,9 @@ export default defineConfig({
 
 No seu arquivo CSS (ex: `style.css`):
 ```css
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 ```
 
 ---
 
-✅ Agora você está pronto para desenvolver com **Vite**, **Vue 3**, **SCSS** e **TailwindCSS**!
+✅ Agora você está pronto para desenvolver com **Vite**, **react 3**, **SCSS** e **TailwindCSS**!
